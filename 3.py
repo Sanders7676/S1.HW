@@ -9,3 +9,39 @@
 # 123456 >>> no
 
 # (*) Усложнение. Вывод результат на экран сделайте одной строкой(только один print), для этого используйте тернарный оператор
+
+
+
+
+number = int(input('Введите шестизначное число: '))
+
+# Определяем сумму трех цифр справа:
+
+discharge1 = number % 10
+
+discharge2 = (number % 100) // 10
+
+discharge3 = (number % 1000) // 100
+
+rightSumOfDigits = discharge1 + discharge2 + discharge3
+
+# Определяем сумму трех цифр слева:
+
+discharge4 = (number % 10000) // 1000
+
+discharge5 = (number % 100000) // 10000
+
+discharge6 = (number % 1000000) // 100000
+
+leftSumOfDigits = discharge4 + discharge5 + discharge6
+
+# Сравниваем значения сумм слева и справа и выводим результат проверки
+
+if rightSumOfDigits == leftSumOfDigits:
+  print('YES')
+else:
+  print('NO')
+
+# Сравнение и вывод результата с помощью тернарного оператора:
+
+# print('YES' if rightSumOfDigits == leftSumOfDigits else 'NO")
