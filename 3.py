@@ -40,4 +40,4 @@ else:
 
 # Сравнение и вывод результата с помощью тернарного оператора:
 
-print('YES' if rightSumOfDigits == leftSumOfDigits else 'NO")
+print('YES' if rightSumOfDigits == leftSumOfDigits else 'NO')

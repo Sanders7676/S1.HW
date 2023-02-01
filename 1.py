@@ -23,9 +23,3 @@ discharge3 = (number % 1000) // 100
 sumOfDigitsInDigits = discharge1 + discharge2 + discharge3
 
 print(f'Сумма цифр в числе {number} равна {sumOfDigitsInDigits}')
-
-
-
-# print(discharge1)
-# print(discharge2)
-# print(discharge3)

@@ -28,4 +28,4 @@ else:
 
 # Решение с тернарным оператором:
 
-# print(f'{cranesOfPeetOrSerge}  {cranesOfKate}  {cranesOfPeetOrSerge}' if s % 6 == 0 else 'В данном случае решение отсутствует, так как не могут быть соблюдены условия задачи.')
+print(f'{cranesOfPeetOrSerge}  {cranesOfKate}  {cranesOfPeetOrSerge}' if s % 6 == 0 else 'В данном случае решение отсутствует, так как не могут быть соблюдены условия задачи.')
