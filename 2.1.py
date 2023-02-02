@@ -15,19 +15,22 @@
 
 n_number_of_coins = int(input('Введите количество монет, лежащих на столе: '))
 
-
-# чтобы узнать мин колич монет кот нужно перевернуть - сравним значения орлов и решек:
-
-# if number_of_eagles <= number_of_tails:            side of the coin
-
 number_of_eagles = 0
 number_of_tails = 0
+current_coin = 1
 
-for i in range (1, n_number_of_coins):
-    current_coin = int(input('Введите сторону монеты, где орел это "1", а решка это "0": '))
-    if current_coin == 1:
+for current_coin in range (1, n_number_of_coins + 1):
+    side_of_coin = int(input(f'Введите положение монеты {current_coin}: 0 или 1: '))
+    if side_of_coin == 1:
         number_of_eagles += 1
     else:
         number_of_tails += 1
+    current_coin += 1
+
 print(f'Количество монет с орлом - {number_of_eagles}')
 print(f'Количество монет с решкой - {number_of_tails}')
+
+if number_of_eagles <= number_of_tails:
+    print(f'Количество монет, которые необходимо перевернуть - {number_of_eagles}')
+else:
+    print(f'Количество монет, которые необходимо перевернуть - {number_of_tails}')
