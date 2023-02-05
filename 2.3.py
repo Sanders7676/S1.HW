@@ -21,5 +21,3 @@ current_power_of_two = 0
 while 2**current_power_of_two <= n:
   print(2**current_power_of_two)
   current_power_of_two += 1
-  # print(*(2**current_power_of_two), sep=', ')
-  # или попробовать заменить 2**current_power_of_two на отдельную переменную.
