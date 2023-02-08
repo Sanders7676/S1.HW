@@ -47,3 +47,38 @@ for j in list_2:
 print(available_list)
 print(min_element_in_list_2)
 print(available_list[j])
+
+
+
+# Вариант решения после обработки всего предыдущего:
+
+available_list = [10, 5, 7, 3, 3, 2, 5, 7, 3, 8]        # Если Х = 0, то ответ - 2
+given_number_X = int(input(f'Введите число X: '))
+
+list_2 = []
+
+for i in range(len(available_list)):
+# for i in available_list:    
+    if available_list[i] > given_number_X:
+        q = available_list[i] - given_number_X
+    else:
+        q = given_number_X - available_list[i]
+    list_2.append(q)
+print(list_2)                                       # [10, 5, 7, 3, 3, 2, 5, 7, 3, 8]
+
+min_element_in_list_2 = list_2[0]
+ind = 0
+
+for i in range(1, len(list_2)):
+# for i in range(len(list_2)):    
+# for i in list_2:   
+    if list_2[i] < min_element_in_list_2:     
+        min_element_in_list_2 = list_2[i]
+        ind = i
+
+print(available_list)               # Для проверки
+print(min_element_in_list_2)        # Для проверки
+print(available_list[ind])          # Это ответ.
+
+
+
