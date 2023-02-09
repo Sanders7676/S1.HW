@@ -21,3 +21,11 @@ for i in range(k, len(list_1)):
 for i in range(k):
     list_2.append(list_1[i])
 print(list_2)
+
+
+# Решение с помощью срезов:
+
+list_2 = list_1[k:] + list_1[:k]
+print(list_2)
+
+print(list_1[k:] + list_1[:k])          # или прямо так
