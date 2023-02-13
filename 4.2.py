@@ -35,25 +35,23 @@
 #find index of max value in list 
 # max_index = list_name. index (max_value)
 
-griadka = [1, 2, 3, 4, 5, 6, 7, 8]
-# griadka = [11, 92, 1, 42, 15, 12, 11, 81]
+# arrangement_of_bushes = [1, 2, 3, 4, 5, 6, 7, 8]
+arrangement_of_bushes = [11, 92, 1, 42, 15, 12, 11, 81]
 
-sbor = []
+fee_for_approach = []
 
-for kust in range(len(griadka)):
-    if kust == 0:
-        sbor.append(griadka[0] + griadka[1] + griadka[-1])
-    elif kust == (len(griadka) - 1):
-        sbor.append(griadka[-1] + griadka[-2] + griadka[0])
+for bush in range(len(arrangement_of_bushes)):
+    if bush == 0:
+        fee_for_approach.append(arrangement_of_bushes[0] + arrangement_of_bushes[1] + arrangement_of_bushes[-1])
+    elif bush == (len(arrangement_of_bushes) - 1):
+        fee_for_approach.append(arrangement_of_bushes[-1] + arrangement_of_bushes[-2] + arrangement_of_bushes[0])
     else:
-        sbor.append(griadka[kust] + griadka[kust - 1] + griadka[kust + 1])
+        fee_for_approach.append(arrangement_of_bushes[bush] + arrangement_of_bushes[bush - 1] + arrangement_of_bushes[bush + 1])
 
-# print(sbor)
+# print(fee_for_approach)
 
-#find max value in list
-max_value = max(sbor)
+max_value_of_berry = max(fee_for_approach)
 
-#find index of max value in list 
-max_on_kust = sbor.index(max_value)
+max_is_on_bush = fee_for_approach.index(max_value_of_berry) + 1
 
-print(f'Макс. кол-во ягод {max_value}, собрано для куста {max_on_kust + 1}.')
+print(f'Макс. кол-во ягод {max_value_of_berry}, собрано для куста {max_is_on_bush}.')
