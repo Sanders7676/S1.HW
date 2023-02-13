@@ -35,23 +35,20 @@
 #find index of max value in list 
 # max_index = list_name. index (max_value)
 
-
-
-# griadka = [1, 2, 3, 4, 5, 6, 7, 8]
-griadka = [11, 92, 1, 42, 15, 12, 11, 81]
+griadka = [1, 2, 3, 4, 5, 6, 7, 8]
+# griadka = [11, 92, 1, 42, 15, 12, 11, 81]
 
 sbor = []
 
-for kust in len(griadka):
+for kust in range(len(griadka)):
     if kust == 0:
         sbor.append(griadka[0] + griadka[1] + griadka[-1])
     elif kust == (len(griadka) - 1):
         sbor.append(griadka[-1] + griadka[-2] + griadka[0])
     else:
-        sbor.append(griadka[kust] + griadka[kust - 1] + griadka[kust + 1]
+        sbor.append(griadka[kust] + griadka[kust - 1] + griadka[kust + 1])
 
-print(griadka[0])
-print(sbor)
+# print(sbor)
 
 #find max value in list
 max_value = max(sbor)
@@ -59,5 +56,4 @@ max_value = max(sbor)
 #find index of max value in list 
 max_on_kust = sbor.index(max_value)
 
-print(f'Макс. кол-во ягод {max_value}, собрано для куста {max_on_kust}.')
-    
+print(f'Макс. кол-во ягод {max_value}, собрано для куста {max_on_kust + 1}.')
