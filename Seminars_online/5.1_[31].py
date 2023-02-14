@@ -13,3 +13,16 @@ https://ru.wikipedia.org/wiki/Числа_Фибоначчи
 <function_name>(2) -> 1
 
 <function_name>(9) -> 34
+
+def fib_function(n):
+    # Нужно задать условие, которое будет прерывать функцию
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    else:
+        return fib_function(n - 1) + fib_function(n - 2)
+
+print(fib_function(0))        
+print(fib_function(2))
+print(fib_function(9))
