@@ -14,6 +14,7 @@ https://ru.wikipedia.org/wiki/Числа_Фибоначчи
 
 <function_name>(9) -> 34
 
+
 def fib_function(n):
     # Нужно задать условие, которое будет прерывать функцию
     if n == 0:
