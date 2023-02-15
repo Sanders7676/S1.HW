@@ -7,3 +7,6 @@
 # <function_name>(0,0) -> 0
 # <function_name>(0,2) -> 2
 # <function_name>(3,0) -> 3
+
+
+# Решение м.б. в 4 строки
