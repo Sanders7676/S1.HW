@@ -17,11 +17,11 @@
  
   
 def exponentiation(a: int, b: int) -> int:
-    if b == 0:
+    if b == 0:                                 # Для степени 0
         return 1
-    if b == 1:
+    if b == 1:                                 # Для степени 1
         return a
     else:
-        return (a*exponentiation(a, b - 1))
+        return (a*exponentiation(a, b - 1))    # a умножается на предыдущий результат умножения а*а (в действии функции), b уменьшается на 1
 
 print(exponentiation(2, 4))
