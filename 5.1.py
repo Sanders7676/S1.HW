@@ -16,7 +16,7 @@
 # Когда b достигает нуля процесс останавливается, получаем а, умноженное на себя b раз.
  
   
-def exponentiation(a, b):
+def exponentiation(a: int, b: int) -> int:
     if b == 0:
         return 1
     if b == 1:
