@@ -14,17 +14,17 @@
 # Output: Повторяющихся чисел нет
 
 
-# Решение через множества
+# Решение через множества (неупорядоченный набор чисел)
 
-# set_1 = {2, 4, 6, 8, 10, 12, 10, 8, 6, 4, 2}
-set_1 = {2, 4, 6, 8, 10, 10, 8, 6, 4, 2}
-# set_2 = {3, 6, 9, 12, 15, 18}
-set_2 = {3, 9, 12, 15, 18}
+set_1 = {2, 4, 6, 8, 10, 12, 10, 8, 6, 4, 2}
+# set_1 = {2, 4, 6, 8, 10, 10, 8, 6, 4, 2}
+set_2 = {3, 6, 9, 12, 15, 18}
+# set_2 = {3, 9, 12, 15, 18}
 
 # print(set_1, set_2)
+
 if set_2.intersection(set_1):
-    # print(result_set)
-    print(*sorted(result_set))
+    print(*sorted(set_2.intersection(set_1)))
 else:
     print('Повторяющихся чисел нет')
 
@@ -41,27 +41,26 @@ else:
 # Решение через списки:
 # (в связи с наличием повторяющихся элементов)
 
-print(' ')
 
 
-# list_1 = [2, 4, 6, 8, 10, 12, 10, 8, 6, 4, 2]
-list_1 = [2, 4, 6, 8, 10, 10, 8, 6, 4, 2]
-# list_2 = [3, 6, 9, 12, 15, 18]
-list_2 = [3, 9, 12, 15, 18]
+list_1 = [2, 4, 6, 8, 10, 12, 10, 8, 6, 4, 2]
+# list_1 = [2, 4, 6, 8, 10, 10, 8, 6, 4, 2]
+list_2 = [3, 6, 9, 12, 15, 18]
+# list_2 = [3, 9, 12, 15, 18]
 
-set_3 = set()
+repeating_elements = set()
 
 for element_from_list_1 in list_1:
   for element_from_list_2 in list_2:
     if element_from_list_1 == element_from_list_2:
-      set_3.add(element_from_list_1)
+      repeating_elements.add(element_from_list_1)
       
 # print(set_3)                   # для проверки и наглядности при тестировании
 
-if len(set_3) == 0:
+if len(repeating_elements) == 0:
   print('Повторяющихся чисел нет')
 else:
-  print(*sorted(set_3))
+  print(*sorted(repeating_elements))
 
 
 
