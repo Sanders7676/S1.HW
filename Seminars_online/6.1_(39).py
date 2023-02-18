@@ -15,23 +15,47 @@
 # <function_name>([3, 1, 3, 4, 2, 4, 12], [4, 15, 43, 1, 15, 1] ) -> [3, 3, 2, 12]
 # <function_name>([3, 4, 1, 5, 1, 3, 10, 4, 9, 5], [9, 6, 6, 5, 10, 1, 10, 9, 1, 5] ) -> [3, 4, 3, 4]
 
+from time import perf_counter       # Для измерения времени
+from random import randint          # Для измерения времени
+
+# def diff_set(l: list, l_1: list) -> list:
+#     new_set = set(l).difference(set(l_1))
+#     return list(new_set)
+
+# print(diff_set([3, 1, 3, 4, 2, 4, 12], [4, 15, 43, 1, 15, 1]))
+# print(diff_set([3, 4, 1, 5, 1, 3, 10, 4, 9, 5], [9, 6, 6, 5, 10, 1, 10, 9, 1, 5]))
 
 def diff_set(l: list, l_1: list) -> list:
-    new_set = set(l).difference(set(l_1))
-    return list(new_set)
-
-print(diff_set([3, 1, 3, 4, 2, 4, 12], [4, 15, 43, 1, 15, 1]))
-print(diff_set([3, 4, 1, 5, 1, 3, 10, 4, 9, 5], [9, 6, 6, 5, 10, 1, 10, 9, 1, 5]))
+    t_1 = perf_counter()    # Для измерения времени
+    new_set = list(set(l).difference(set(l_1)))
+    t_2 = perf_counter()    # Для измерения времени 
+    return new_set, t_2 - t_1
 
 
 # Через списки
 
 def diff_list(l: list, l_1: list) -> list:
+    t_1 = perf_counter()  # Для измерения времени
     result = []
     for element in l:
         if element not in l_1 and element not in result:
             result.append(element)
-    return result
+    t_2 = perf_counter()    # Для измерения времени
+    return result, t_2 - t_1
 
-print(diff_list([3, 1, 3, 4, 2, 4, 12], [4, 15, 43, 1, 15, 1]))
-print(diff_list([3, 4, 1, 5, 1, 3, 10, 4, 9, 5], [9, 6, 6, 5, 10, 1, 10, 9, 1, 5]))
+# print(diff_list([3, 1, 3, 4, 2, 4, 12], [4, 15, 43, 1, 15, 1]))
+# print(diff_list([3, 4, 1, 5, 1, 3, 10, 4, 9, 5], [9, 6, 6, 5, 10, 1, 10, 9, 1, 5]))
+
+# Это мы делаем для измерения времени работы 1 и 2 вариантов кода:
+
+n = 10000
+lst1 = [randint(0,int(n)) for i in range(n)]
+lst2 = [randint(0,int(n)) for i in range(n)]
+
+print(diff_list(lst1, lst2)[1]) # diff_list вернет нам кортеж, а от него мы берем индекс "1"
+
+print(diff_set(lst1, lst2)[1]) # diff_list вернет нам кортеж, а от него мы берем индекс "1"
+
+# !!! По результатам проверки видим, что множества существеннее быстрее списков !!! в 90 - 100 раз
+
+# Т.е. если можно решать через множество, то нужно выбирать этот вариант!
