@@ -22,17 +22,41 @@
 
 # (**) Усложнение. Присвоение значений переменным a1,d,n запишите, используя только один input, в одну строку, вам понадобится распаковка и Comprehension или map
 
-input(int(a1, n, d))
+print(' ')
 
-def arifmethical_function(a1, n, d):
-  list_a = []
-  list_a[0] = a1
-  len(list_a) = n
-  for a_n in range(1, n):
-    list_a[a_n] = a1 + (n-1) * d
-  return list_a
- 
-print(arifmethical_function())
- 
---
-Отправлено из Mail.ru для Android
+print('Введите показатели арифметической прогрессии:')
+first_element, progression_step, number_of_progression_elements = int(input(f'Первый элемент: ')), int(input(f'Шаг: ')), int(input(f'Количество элементов: '))
+
+print(' ')
+
+def forming_arithmetic_progression(first_element, progression_step, number_of_progression_elements):
+  progression = []
+  
+  for index in range(0, number_of_progression_elements):
+    current_element = first_element + progression_step * index
+    progression.append(current_element)
+  
+  print(progression)
+
+forming_arithmetic_progression(first_element, progression_step, number_of_progression_elements)
+
+print(' ')
+
+
+print('Введите через пробел показатели прогрессии: первый элемент, шаг и количество элементов:')
+# Ввод показателей прогрессии в одну строку через Comprehension:
+first_element, progression_step, number_of_progression_elements = [int(x) for x in input().split()]
+
+# Ввод показателей прогрессии в одну строку через функцию map:
+# first_element, progression_step, number_of_progression_elements = map(int, input().split())
+
+print(' ')
+
+# Формирование списка через Comprehension:
+def forming_arithmetic_progression(first_element, progression_step, number_of_progression_elements):
+  progression = [first_element + progression_step * index for index in range(0, number_of_progression_elements)]
+  print(progression)
+
+forming_arithmetic_progression(first_element, progression_step, number_of_progression_elements)
+
+print(' ')
