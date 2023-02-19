@@ -29,7 +29,7 @@ first_element, progression_step, number_of_progression_elements = int(input(f'П
 
 print(' ')
 
-def forming_arithmetic_progression(first_element, progression_step, number_of_progression_elements):
+def forming_arithmetic_progression(first_element: int, progression_step: int, number_of_progression_elements: int) -> None:
   progression = []
   
   for index in range(number_of_progression_elements):
@@ -53,7 +53,7 @@ first_element, progression_step, number_of_progression_elements = [int(x) for x 
 print(' ')
 
 # Формирование списка через Comprehension:
-def forming_arithmetic_progression(first_element, progression_step, number_of_progression_elements):
+def forming_arithmetic_progression(first_element: int, progression_step: int, number_of_progression_elements: int) -> None:
   # progression = [first_element + progression_step * index for index in range(number_of_progression_elements)]
   # print(progression)
   print([first_element + progression_step * index for index in range(number_of_progression_elements)])  # Принт с Компрехеншеном внутри
