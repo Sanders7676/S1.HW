@@ -29,7 +29,7 @@ num_2 = 10
 # num_2 = 9
 # num_2 = 6
 
-def create_list_2(list_1, num_1, num_2):
+def create_list_2(list_1: int, num_1: int, num_2: int) -> None:
     list_2 = []
     for i in range(len(list_1)):
         if list_1[i] >= num_1 and list_1[i] <= num_2:
@@ -41,7 +41,7 @@ create_list_2(list_1, num_1, num_2)
 print(' ')
 
 # Формирование списка через Comprehension:
-def create_list_2(list_1, num_1, num_2):
+def create_list_2(list_1: int, num_1: int, num_2: int) -> None:
     print([i for i in range(len(list_1)) if list_1[i] >= num_1 and list_1[i] <= num_2])  # Принт с Компрехеншеном внутри
 
 create_list_2(list_1, num_1, num_2)
@@ -49,7 +49,7 @@ create_list_2(list_1, num_1, num_2)
 print(' ')
 
 # Формирование списка кортежей вида: индекс, значение
-def create_list_2(list_1, num_1, num_2):
+def create_list_2(list_1: int, num_1: int, num_2: int) -> None:
     print([(i, list_1[i]) for i in range(len(list_1)) if list_1[i] >= num_1 and list_1[i] <= num_2])  # Принт с Компрехеншеном внутри
 
 create_list_2(list_1, num_1, num_2)
