@@ -16,3 +16,18 @@
 # same_by(lambda x: x[0], ["qz", "zr1", "tz", "zi", "oz", "zs", "dz", "zh"]) -> False
 # same_by(lambda x: x[0], ["qz", "qr1", "qz", "qi", "qz", "qs", "qz", "qh"]) -> True
 # [*] Усложнение. Не используйте цикл в функции
+
+
+def same_by1(func, lst) -> bool:
+if len(lst) == 0: return None
+for idx in range(1, len(lst)):
+if func(lst[idx]) != func(lst[idx - 1]): return False
+return True
+
+
+def same_by(func, lst) -> bool:
+if len(lst) == 0: return None
+tmp1 = map(func, lst)
+tmp2 = set(tmp1)
+if len(tmp2) == 1: return True
+return False

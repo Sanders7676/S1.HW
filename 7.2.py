@@ -19,9 +19,23 @@
 # 5  10  15  20  25  30
 # 6  12  18  24  30  36
 
+print('')
+
+def operation(row, column):
+    return row * column
+
+print(operation(2, 2))
+
+operation = lambda row, column: row * column
+print(operation(2, 2))
+
+print('')
+
+def print_operation_table(operation, num_rows = 6, num_columns = 6):
+    
 
 
-
+print('')
 
 
 
