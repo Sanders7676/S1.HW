@@ -60,9 +60,7 @@ def is_rithmic_chant(chant: str) -> None:
         number_of_vowels_per_phrase.append(num_of_vowels)
     
     # print(number_of_vowels_per_phrase)
-    is_rithm_in_phrase = set(number_of_vowels_per_phrase)
-    # print(is_rithm_in_phrase)
-    if len(is_rithm_in_phrase) != 1: print(False)
+    if len(set(number_of_vowels_per_phrase)) != 1: print(False)
     else: print(True)
 
 

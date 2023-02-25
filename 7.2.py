@@ -32,12 +32,20 @@ print(operation(2, 2))
 print('')
 
 def print_operation_table(operation, num_rows = 6, num_columns = 6):
-    
+    raise
 
 
 print('')
 
+def op_hop(operation, num_row, num_column)
 
+  for i in num_row:
+ 
+    row = []
+    for j in num_column:
+      el = operation(x, y)
+      row.append(el)
+    print(*row)
 
 
 
