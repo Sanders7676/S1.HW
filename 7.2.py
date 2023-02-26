@@ -19,35 +19,36 @@
 # 5  10  15  20  25  30
 # 6  12  18  24  30  36
 
-print('')
+# print('')
 
-def operation(row, column):
-    return row * column
+# def operation1(row, column):
+#     return row * column
 
-print(operation(2, 2))
+# def operation2(row, column):
+#     return row ** column
 
-operation = lambda row, column: row * column
-print(operation(2, 2))
+# operation = lambda row, column: row * column
+# print(operation(2, 2))
 
 print('')
 
 def print_operation_table(operation, num_rows = 6, num_columns = 6):
-    raise
+    for row in range(1, num_rows + 1):
+        # rows = []
+        # for column in range(1, num_columns + 1):
+        #   element = operation(row, column)
+        #   rows.append(element)
+        # print(*rows)
+        print(*[operation(row, column) for column in range(1, num_columns + 1)])     # Компрехеншен
 
-
+# print_operation_table(operation1, 4, 4)
+# print('')
+# print_operation_table(operation2, 4, 4)
 print('')
-
-def op_hop(operation, num_row, num_column)
-
-  for i in num_row:
- 
-    row = []
-    for j in num_column:
-      el = operation(x, y)
-      row.append(el)
-    print(*row)
-
-
+print_operation_table(lambda x,y: x**y,4,4)
+print('')
+print_operation_table(lambda x,y: x*y)
+print('')
 
 # (*) Усложнение. Сформируйте форматированный вывод с номерами строк и столбцов
 
