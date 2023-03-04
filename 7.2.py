@@ -19,7 +19,7 @@
 # 5  10  15  20  25  30
 # 6  12  18  24  30  36
 
-# print('')
+# print()
 
 # def operation1(row, column):
 #     return row * column
@@ -30,7 +30,7 @@
 # operation = lambda row, column: row * column
 # print(operation(2, 2))
 
-print('')
+print()
 
 def print_operation_table(operation, num_rows = 6, num_columns = 6):
     for row in range(1, num_rows + 1):
@@ -42,13 +42,13 @@ def print_operation_table(operation, num_rows = 6, num_columns = 6):
         print(*[operation(row, column) for column in range(1, num_columns + 1)])     # Компрехеншен
 
 # print_operation_table(operation1, 4, 4)
-# print('')
+# print()
 # print_operation_table(operation2, 4, 4)
-print('')
+print()
 print_operation_table(lambda x,y: x**y,4,4)
-print('')
+print()
 print_operation_table(lambda x,y: x*y)
-print('')
+print()
 
 # (*) Усложнение. Сформируйте форматированный вывод с номерами строк и столбцов
 
