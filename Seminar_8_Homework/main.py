@@ -59,4 +59,4 @@ def menu(data: dict, id_client: int):
             print('Некорректный ввод данных, введите ещё раз: ')
 
 
-menu(phone_book, id_client)
+menu(phone_book)
