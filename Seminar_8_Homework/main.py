@@ -22,7 +22,7 @@ import model as m
 
 phone_book = []
 
-def menu(data: list):
+def menu(data: list): # Вывод меню для выбора действий
     while True:
         print('Выберите действие: ')
         print('0 - Выйти из справочника')
