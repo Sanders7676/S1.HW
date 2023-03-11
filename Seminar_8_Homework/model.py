@@ -2,7 +2,7 @@ def create(data: list, el: list) -> list: # добавляет запись в �
     data.append(el)
     return data
 
-def batch_create(data: list, batch_data) -> list:
+def batch_create(data: list, batch_data) -> list: # Добавляет записи из batch_data в справочник
     for el in batch_data:
         data = create(data, el)
     return data
