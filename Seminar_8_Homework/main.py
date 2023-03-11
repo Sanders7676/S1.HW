@@ -60,20 +60,3 @@ def menu(data: dict, id_client: int):
 
 
 menu(phone_book, id_client)
-
-
-
-def create(data: dict, id: int, elem: tuple) -> dict: # добавляет запись в существующую телефонную книгу
-    data[id] = elem
-    return data
-
-def print_phone_book(data: dict) -> None:
-    for key, values in data.items():
-        print(f'Идентификатор: {key}, {values}')
-
-def get_data() -> tuple: # запрашивает данные у пользователя
-    surname = input('Введите фамилию: ')
-    name = input('Введите имя: ')
-    phone = input('Введите номер телефона: ')
-    discription = input('Введите описание: ')
-    return (surname, name, phone, discription)
