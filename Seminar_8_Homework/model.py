@@ -7,15 +7,15 @@ def batch_create(data: list, batch_data) -> list: # Добавляет запи�
         data = create(data, el)
     return data
 
-def print_phone_book(data: list) -> None:
+def print_phone_book(data: list) -> None: # Печать телефонной книги
     print(f'Контакты: ')
     for el in data:
         print_record(el)
 
-def print_record(record: list) -> None:
+def print_record(record: list) -> None: # Печать записи из телефонной книги
     print(f'{record[0]:10s}| {record[1]:10s}| {record[2]:20s}| {record[3]}')
 
-def get_data() -> list: # запрашивает данные у пользователя
+def get_data() -> list: # Запрос данных у пользователя
     surname = input('Введите фамилию: ')
     name = input('Введите имя: ')
     phone = input('Введите номер телефона: ')

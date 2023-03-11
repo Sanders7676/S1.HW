@@ -1,4 +1,4 @@
-def get_file_name() -> str:
+def get_file_name() -> str: # Прием имени файла в котором содержится телефонная книга
     return input('Введите имя файла: ')
 
 def get_batch_data(name_file: str) -> list: # Импорт данных из текстового файла формата csv.
