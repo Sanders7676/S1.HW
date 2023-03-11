@@ -13,7 +13,7 @@ def print_phone_book(data: list) -> None:
         print_record(el)
 
 def print_record(record: list) -> None:
-    print(f'{record[0]:15s}, {record[1]}, {record[2]}, {record[3]}')
+    print(f'{record[0]:10s}| {record[1]:10s}| {record[2]:20s}| {record[3]}')
 
 def get_data() -> list: # запрашивает данные у пользователя
     surname = input('Введите фамилию: ')

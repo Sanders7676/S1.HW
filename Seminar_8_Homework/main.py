@@ -50,7 +50,7 @@ def menu(data: list):
             m.delete(data)
         elif get == '6':
             name_file = ex.get_file_name()
-            batch_data = ex.get_bath_data(name_file)
+            batch_data = ex.get_batch_data(name_file)
             data = m.batch_create(data, batch_data)
         elif get == '7':
             name_file = ex.get_file_name()
